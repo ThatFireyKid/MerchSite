@@ -1,58 +1,99 @@
-/* Basic reset for padding and margins */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body and background setup */
+/* Body */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0;
   display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100vh;           /* Full viewport height */
+  text-align: center;      /* Centers the text inside */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Change to your preferred font */
+  background-color: #f4f4f4;  /* Soft background color */
+  color: #333;             /* Dark text for contrast */
+}
+
+/* Header styles */
+header {
+  margin-bottom: 20px;     /* Adds some space below the header */
+}
+
+header h1 {
+  font-size: 3em;          /* Larger font size for the header */
+  color: #FF6347;          /* Firey red for the title */
+}
+
+header p {
+  font-size: 1.2em;        /* A little smaller font for the subheading */
+  color: #555;             /* Slightly lighter color for description */
+}
+
+/* Main content styles */
+main {
+  display: flex;
+  flex-direction: column;  /* Ensures content stacks vertically */
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full screen height */
-  flex-direction: column; /* Stacks content vertically */
-  text-align: center; /* Centers text */
+  text-align: center;
 }
 
-/* Container for the home page content */
-.container {
-  max-width: 800px; /* Limits the width */
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+main img {
+  max-width: 80%;          /* Ensures the image is responsive */
+  height: auto;
+  margin-bottom: 20px;     /* Adds space below the image */
 }
 
-/* Header styling */
-h1 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Links to other pages */
+/* Product link button */
 a {
   display: inline-block;
-  margin: 10px 0;
-  padding: 12px 25px;
-  background-color: #007bff;
-  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.1em;
   text-decoration: none;
+  background-color: #FF6347; /* Firey red button */
+  color: white;
   border-radius: 5px;
-  font-size: 18px;
+  margin-top: 20px;
   transition: background-color 0.3s;
 }
 
 a:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #FF4500; /* Darker red on hover */
 }
 
-/* Footer styling */
+/* Footer styles */
 footer {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #777;
+  margin-top: 20px;        /* Adds some space above the footer */
+  font-size: 0.9em;
+  color: #777;             /* Light gray text */
+}
+
+/* Optional: Add some space around the page */
+.container {
+  padding: 0 20px;         /* Padding on small screens */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;   /* Add padding for small screens */
+    height: auto;    /* Allow content to flow naturally */
+  }
+
+  header h1 {
+    font-size: 2em;  /* Smaller text on mobile */
+  }
+
+  main img {
+    width: 80%;      /* Ensure the image is responsive on mobile */
+  }
+
+  a {
+    font-size: 1em;  /* Smaller button text on mobile */
+    padding: 8px 16px; /* Adjust button size for mobile */
+  }
 }
