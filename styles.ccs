@@ -1,86 +1,58 @@
-/* General Styles */
+/* Basic reset for padding and margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and background setup */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  flex-direction: column; /* Stacks content vertically */
+  text-align: center; /* Centers text */
 }
 
-header {
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/* Container for the home page content */
+.container {
+  max-width: 800px; /* Limits the width */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
+/* Header styling */
 h1 {
-    font-size: 2.5em;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 1.8em;
+/* Links to other pages */
+a {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
 }
 
-p {
-    font-size: 1.2em;
+a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
-nav a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-size: 1.1em;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-#merchandise {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.product {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    width: 200px;
-    text-align: center;
-}
-
-.order-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.order-btn:hover {
-    background-color: #0056b3;
-}
-
-#error-code {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 15px;
-    margin-top: 20px;
-    display: none;
-    text-align: center;
-}
-
-.hidden {
-    display: none;
+/* Footer styling */
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
 }
