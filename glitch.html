@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitch - Error Detected</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #00FF00; /* Glitchy neon green text */
+            font-family: 'Courier New', monospace;
+            text-align: center;
+        }
+        h1 {
+            font-size: 4em;
+            color: #FF0000;
+        }
+        .glitch-text {
+            font-size: 2em;
+            color: #00FF00;
+            animation: glitch 1s infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 0 red, -2px 0 blue; }
+            25% { text-shadow: -2px 0 red, 2px 0 blue; }
+            50% { text-shadow: 2px 0 blue, -2px 0 red; }
+            75% { text-shadow: -2px 0 blue, 2px 0 red; }
+            100% { text-shadow: 2px 0 red, -2px 0 blue; }
+        }
+        .hidden-clue {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="glitch-text">Error Detected</h1>
+        <p>you're not supposed to be here...</p>
+    </header>
+    <main>
+        <p class="glitch-text">Something is off...</p>
+        <div class="hidden-clue">
+            <p>Clue: <span id="clue">VGhlcm1pdGUgY29uY2VhbGVk</span> </p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 That Firey Kid - All Rights Reserved</p>
+    </footer>
+    <script>
+        // Console Clue
+        console.log("glitch.html accessed: Please find the hidden key to proceed.");
+    </script>
+</body>
+</html>
