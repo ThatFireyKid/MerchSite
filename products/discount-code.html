@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Code</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .discount-input {
+            padding: 10px;
+            font-size: 1em;
+            margin-right: 10px;
+        }
 
+        .discount-submit {
+            padding: 10px 15px;
+            background-color: #FF6347;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .discount-submit:hover {
+            background-color: #FF4500;
+        }
+
+        .clue-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Enter Your Discount Code</h1>
+        <p>Unlock a special discount when you enter the right code!</p>
+    </header>
+
+    <main>
+        <label for="discount-input">Enter Your Discount Code:</label>
+        <input type="text" id="discount-input" class="discount-input" placeholder="Enter your code here">
+        <button class="discount-submit" onclick="verifyDiscountCode()">Submit</button>
+
+        <div class="clue-message" id="clue-message" style="display:none;">
+            <p>Clue: <span id="clue-text">VGhlcm1pdGUgY29uY2VhbGVk</span></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 That Firey Kid - All Rights Reserved</p>
+    </footer>
+
+  <script>
+    const validDiscountCodes = {
+        "His Name": "Travis F. Kane",
+        "Thermium": "Log 1: I've decieded to start keeping logs on the research I'm doing. I've discovered something, something incredible. I don't know how I did it, or what this stuff is capable of, but I do know one thing: It might be the key to saving our planet from extinction",
+        "MysteryCode": "The truth is closer than you think... You’re getting warmer.",
+        // Add more codes here as you wish
+    };
+
+    function verifyDiscountCode() {
+        const inputCode = document.getElementById('discount-input').value;
+        const message = validDiscountCodes[inputCode];
+
+        if (message) {
+            document.getElementById('clue-message').textContent = message; // Show the corresponding clue/message
+            document.getElementById('clue-message').style.display = 'block'; // Make clue visible
+            alert("Correct code! You've unlocked the clue.");
+        } else {
+            alert("Incorrect code. Please try again.");
+        }
+    }
+</script>
