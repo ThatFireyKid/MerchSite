@@ -7,26 +7,27 @@
 
 /* Body and Layout */
 body {
-  display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center;     /* Centers the content vertically */
-  height: 100vh;           /* Full viewport height */
-  background-color: #121212;
   font-family: 'Roboto', sans-serif;
+  background-color: #121212;
   color: #00FF00;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-/* Main Content Wrapper */
+/* Main Container */
 .container {
-  max-width: 1200px; /* Maximum width for content */
-  width: 100%; /* Ensures the container uses full width */
-  background-color: #1a1a1a; /* Dark background for the content */
+  max-width: 1200px;
+  width: 100%;
   padding: 20px;
+  background-color: #1a1a1a;
   border-radius: 10px;
 }
 
-/* Header Section */
+/* Header Styling */
 header {
   margin-bottom: 30px;
 }
@@ -42,30 +43,37 @@ header p {
   color: #aaa;
 }
 
-/* Product List Section */
+/* Product List Container */
 .product-list-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+/* Product Item Styling */
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid layout for products */
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  margin-top: 20px;
+  justify-content: center;
+  width: 100%;
 }
 
 .product-item {
   background-color: #333;
-  padding: 15px;
   border-radius: 8px;
+  padding: 20px;
+  width: 250px; /* Ensures products are well-sized */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
 .product-item a {
-  text-decoration: none;
   color: #FF6347;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .product-item a:hover {
@@ -73,18 +81,18 @@ header p {
 }
 
 .product-image {
-  width: 100%;
-  max-width: 200px; /* Set max width for images */
+  max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  border-radius: 8px;
 }
 
 .product-item p {
   font-size: 1.2em;
-  color: #fff;
+  color: white;
 }
 
-/* Footer Section */
+/* Footer Styling */
 footer {
   margin-top: 30px;
   font-size: 0.9em;
