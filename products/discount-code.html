@@ -6,6 +6,43 @@
     <title>Discount Code</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Body Styles */
+        body {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;     /* Centers vertically */
+            height: 100vh;           /* Full viewport height */
+            text-align: center;      /* Centers the text inside */
+            margin: 0;
+            font-family: Arial, sans-serif; /* Change to your preferred font */
+            background-color: #f4f4f4;  /* Soft background color */
+            color: #333;             /* Dark text for contrast */
+        }
+
+        /* Header Styles */
+        header {
+            margin-bottom: 20px;     /* Adds some space below the header */
+        }
+
+        header h1 {
+            font-size: 3em;          /* Larger font size for the header */
+            color: #FF6347;          /* Firey red for the title */
+        }
+
+        header p {
+            font-size: 1.2em;        /* A little smaller font for the subheading */
+            color: #555;             /* Slightly lighter color for description */
+        }
+
+        /* Main Content Styles */
+        main {
+            display: flex;
+            flex-direction: column;  /* Ensures content stacks vertically */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
         .discount-input {
             padding: 10px;
             font-size: 1em;
@@ -24,11 +61,30 @@
             background-color: #FF4500;
         }
 
+        /* Logs Section */
+        .logs {
+            max-height: 500px; /* Adjust to fit your layout */
+            overflow-y: auto;  /* Enables scroll if the content exceeds max height */
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #333;
+        }
+
         .clue-message {
             display: none;
             margin-top: 20px;
             font-size: 1.2em;
             color: #00FF00;
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 20px;        /* Adds some space above the footer */
+            font-size: 0.9em;
+            color: #777;             /* Light gray text */
         }
     </style>
 </head>
@@ -47,30 +103,49 @@
         <div class="clue-message" id="clue-message" style="display:none;">
             <p>Clue: <span id="clue-text">VGhlcm1pdGUgY29uY2VhbGVk</span></p>
         </div>
+
+        <!-- Log Container for Debugging or Other Clues -->
+        <div class="logs" id="logs-container">
+            <h2>Logs</h2>
+            <!-- Logs will be inserted dynamically here -->
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 That Firey Kid - All Rights Reserved</p>
     </footer>
 
-  <script>
-    const validDiscountCodes = {
-        "His Name": "Travis F. Kane",
-        "Thermium": "Log 1: I've decieded to start keeping logs on the research I'm doing. I've discovered something, something incredible. I don't know how I did it, or what this stuff is capable of, but I do know one thing: It might be the key to saving our planet from extinction",
-        "MysteryCode": "The truth is closer than you think... You’re getting warmer.",
-        // Add more codes here as you wish
-    };
+    <script>
+        const validDiscountCodes = {
+            "His Name": "Travis F. Kane",
+            "Thermium": "Log 1: I've decided to start keeping logs on the research I'm doing. I've discovered something, something incredible. I don't know how I did it, or what this stuff is capable of, but I do know one thing: It might be the key to saving our planet from extinction.",
+            "MysteryCode": "The truth is closer than you think... You’re getting warmer.",
+            // Add more codes here as you wish
+        };
 
-    function verifyDiscountCode() {
-        const inputCode = document.getElementById('discount-input').value;
-        const message = validDiscountCodes[inputCode];
+        function verifyDiscountCode() {
+            const inputCode = document.getElementById('discount-input').value;
+            const message = validDiscountCodes[inputCode];
 
-        if (message) {
-            document.getElementById('clue-message').textContent = message; // Show the corresponding clue/message
-            document.getElementById('clue-message').style.display = 'block'; // Make clue visible
-            alert("Correct code! You've unlocked the clue.");
-        } else {
-            alert("Incorrect code. Please try again.");
+            if (message) {
+                document.getElementById('clue-message').textContent = message; // Show the corresponding clue/message
+                document.getElementById('clue-message').style.display = 'block'; // Make clue visible
+                alert("Correct code! You've unlocked the clue.");
+                addLog(inputCode, message); // Add the log entry
+            } else {
+                alert("Incorrect code. Please try again.");
+            }
         }
-    }
-</script>
+
+        // Function to add logs
+        function addLog(code, message) {
+            const logsContainer = document.getElementById('logs-container');
+            const logEntry = document.createElement('div');
+            logEntry.classList.add('log-entry');
+            logEntry.innerHTML = `<strong>Code:</strong> ${code} <br> <strong>Message:</strong> ${message}`;
+            logsContainer.appendChild(logEntry);
+        }
+    </script>
+
+</body>
+</html>
