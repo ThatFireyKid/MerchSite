@@ -8,7 +8,6 @@
 /* Body and Layout */
 body {
   display: flex;
-  flex-direction: column;
   justify-content: center; /* Centers the content horizontally */
   align-items: center;     /* Centers the content vertically */
   height: 100vh;           /* Full viewport height */
@@ -18,59 +17,74 @@ body {
   text-align: center;
 }
 
-/* Header Styling */
+/* Main Content Wrapper */
+.main-content {
+  width: 100%;
+  max-width: 1200px; /* Maximum width for content */
+  padding: 20px;
+  background-color: #1a1a1a; /* Dark background for the content */
+  border-radius: 10px;
+}
+
+/* Header Styles */
 header {
   margin-bottom: 30px;
 }
 
-h1 {
+header h1 {
   font-size: 3em;
   color: #FF6347; /* Firey Red */
   margin-bottom: 10px;
 }
 
-p {
+header p {
   font-size: 1.5em;
   color: #aaa;
-  margin-bottom: 20px;
 }
 
-/* Product List Styling */
-.product-list {
+/* Product List Section */
+.product-list-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
-  margin: 0 20px;
+  margin-top: 20px;
 }
 
 .product-item {
-  text-decoration: none;
-  color: #00FF00;
-  text-align: center;
-  background-color: #222;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s, background-color 0.3s;
-  width: 200px; /* Fixed width for consistency */
-  margin-bottom: 20px;
-}
-
-.product-item:hover {
-  transform: scale(1.05);
   background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.product-item img {
-  border-radius: 5px;
+.product-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
   margin-bottom: 10px;
+}
+
+.product-item a {
+  text-decoration: none;
+  color: #FF6347;
+}
+
+.product-item a:hover {
+  color: #FF4500; /* Darker red on hover */
 }
 
 .product-item p {
   font-size: 1.2em;
+  color: #fff;
 }
 
-/* Footer Styling */
+/* Footer Section */
 footer {
   margin-top: 30px;
   font-size: 0.9em;
