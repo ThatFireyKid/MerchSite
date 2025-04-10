@@ -25,6 +25,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
+  width: 100%; /* Ensures the container uses the full width */
 }
 
 /* Header styles */
