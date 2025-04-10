@@ -8,6 +8,7 @@
 /* Body and Layout */
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Centers the content horizontally */
   align-items: center;     /* Centers the content vertically */
   height: 100vh;           /* Full viewport height */
@@ -40,6 +41,7 @@ p {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin: 0 20px;
 }
 
 .product-item {
@@ -50,6 +52,8 @@ p {
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s, background-color 0.3s;
+  width: 200px; /* Fixed width for consistency */
+  margin-bottom: 20px;
 }
 
 .product-item:hover {
