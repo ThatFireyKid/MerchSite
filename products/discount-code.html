@@ -61,18 +61,6 @@
             background-color: #FF4500;
         }
 
-        /* Logs Section */
-        .logs {
-            max-height: 500px; /* Adjust to fit your layout */
-            overflow-y: auto;  /* Enables scroll if the content exceeds max height */
-            width: 90%;
-            margin: 20px auto;
-            padding: 10px;
-            background-color: #222;
-            color: #fff;
-            border: 1px solid #333;
-        }
-
         .clue-message {
             display: none;
             margin-top: 20px;
@@ -103,12 +91,6 @@
         <div class="clue-message" id="clue-message" style="display:none;">
             <p>Clue: <span id="clue-text">VGhlcm1pdGUgY29uY2VhbGVk</span></p>
         </div>
-
-        <!-- Log Container for Debugging or Other Clues -->
-        <div class="logs" id="logs-container">
-            <h2>Logs</h2>
-            <!-- Logs will be inserted dynamically here -->
-        </div>
     </main>
 
     <footer>
@@ -131,21 +113,12 @@
                 document.getElementById('clue-message').textContent = message; // Show the corresponding clue/message
                 document.getElementById('clue-message').style.display = 'block'; // Make clue visible
                 alert("Correct code! You've unlocked the clue.");
-                addLog(inputCode, message); // Add the log entry
             } else {
                 alert("Incorrect code. Please try again.");
             }
-        }
-
-        // Function to add logs
-        function addLog(code, message) {
-            const logsContainer = document.getElementById('logs-container');
-            const logEntry = document.createElement('div');
-            logEntry.classList.add('log-entry');
-            logEntry.innerHTML = `<strong>Code:</strong> ${code} <br> <strong>Message:</strong> ${message}`;
-            logsContainer.appendChild(logEntry);
         }
     </script>
 
 </body>
 </html>
+
