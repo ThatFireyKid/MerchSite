@@ -5,107 +5,60 @@
   box-sizing: border-box;
 }
 
-/* Body */
+/* Body and Layout */
 body {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center;     /* Centers the content vertically */
   height: 100vh;           /* Full viewport height */
-  text-align: center;      /* Centers the text inside */
-  margin: 0;
-  font-family: Arial, sans-serif; /* Change to your preferred font */
-  background-color: #f4f4f4;  /* Soft background color */
-  color: #333;             /* Dark text for contrast */
-}
-
-/* Header styles */
-header {
-  margin-bottom: 20px;     /* Adds some space below the header */
-}
-
-header h1 {
-  font-size: 3em;          /* Larger font size for the header */
-  color: #FF6347;          /* Firey red for the title */
-}
-
-header p {
-  font-size: 1.2em;        /* A little smaller font for the subheading */
-  color: #555;             /* Slightly lighter color for description */
-}
-
-/* Main content styles */
-main {
-  display: flex;
-  flex-direction: column;  /* Ensures content stacks vertically */
-  justify-content: center;
-  align-items: center;
+  background-color: #121212;
+  font-family: 'Roboto', sans-serif;
+  color: #00FF00;
   text-align: center;
 }
 
-main img {
-  max-width: 80%;          /* Ensures the image is responsive */
-  height: auto;
-  margin-bottom: 20px;     /* Adds space below the image */
+/* Container Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Product link button */
-a {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1.1em;
-  text-decoration: none;
-  background-color: #FF6347; /* Firey red button */
+/* Header styles */
+h1 {
+  font-size: 3em;
+  color: #FF6347; /* Firey Red */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5em;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* Link button styling */
+.main-btn {
+  background-color: #FF6347;
   color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-decoration: none;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 10px;
   transition: background-color 0.3s;
 }
 
-a:hover {
+.main-btn:hover {
   background-color: #FF4500; /* Darker red on hover */
 }
 
-/* Footer styles */
+/* Footer Styling */
 footer {
-  margin-top: 20px;        /* Adds some space above the footer */
+  margin-top: 20px;
   font-size: 0.9em;
-  color: #777;             /* Light gray text */
-}
-
-/* Optional: Add some space around the page */
-.container {
-  padding: 0 20px;         /* Padding on small screens */
-}
-
-/* Logs container styles */
-.logs {
-  max-height: 500px; /* Adjust to fit your layout */
-  overflow-y: auto;  /* Enables scroll if the content exceeds max height */
-  width: 90%;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #222;
-  color: #fff;
-  border: 1px solid #333;
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  body {
-    padding: 20px;   /* Add padding for small screens */
-    height: auto;    /* Allow content to flow naturally */
-  }
-
-  header h1 {
-    font-size: 2em;  /* Smaller text on mobile */
-  }
-
-  main img {
-    width: 80%;      /* Ensure the image is responsive on mobile */
-  }
-
-  a {
-    font-size: 1em;  /* Smaller button text on mobile */
-    padding: 8px 16px; /* Adjust button size for mobile */
-  }
+  color: #aaa;
 }
