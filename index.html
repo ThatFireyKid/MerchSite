@@ -1,20 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="images/logo.png" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TFK Merch!</title>
+  <link rel="icon" href="images/logo.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Body Styles */
+    body {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center;     /* Centers vertically */
+      height: 100vh;           /* Full viewport height */
+      text-align: center;      /* Centers the text inside */
+      margin: 0;
+      font-family: 'Roboto', sans-serif; /* Using the chosen font */
+      background-color: #121212;  /* Dark background */
+      color: #00FF00;             /* Neon green text for contrast */
+    }
+
+    /* Container Styling */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Header styles */
+    h1 {
+      font-size: 3em;
+      color: #FF6347; /* Firey red color */
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #aaa;  /* Light gray text */
+      margin-bottom: 20px;
+    }
+
+    /* Button Styling */
+    .main-btn {
+      background-color: #FF6347;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .main-btn:hover {
+      background-color: #FF4500; /* Darker red on hover */
+    }
+
+    /* Footer Styling */
+    footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+  </style>
 </head>
 <body>
 
   <div class="container">
     <h1>Welcome to the TFK Store!</h1>
     <p>There's Nothing Wrong Here! Nothing at all.</p>
-    
-    <!-- These links should be styled like buttons -->
+
+    <!-- Styled links as buttons -->
     <a href="merch.html" class="main-btn">Visit our Merch Store</a>
     <a href="about.html" class="main-btn">Learn More About Us</a>
   </div>
