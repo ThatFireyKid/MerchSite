@@ -30,6 +30,7 @@
         }
         .hidden-clue {
             display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -49,7 +50,12 @@
     </footer>
     <script>
         // Console Clue
-        console.log("glitch.html accessed: Please find the hidden key to proceed.");
+        console.log("glitch.html accessed: But.... how? You're not supposed to be here. This site shouldn't even be open to the public yet. - TFK");
+
+        // Set a timer to reveal the clue after 10 seconds
+        setTimeout(function() {
+            document.querySelector(".hidden-clue").style.display = "block"; // Reveal the hidden clue
+        }, 10000); // 10000 milliseconds = 10 seconds
     </script>
 </body>
 </html>
