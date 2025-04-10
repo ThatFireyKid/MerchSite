@@ -77,6 +77,18 @@ footer {
   padding: 0 20px;         /* Padding on small screens */
 }
 
+/* Logs container styles */
+.logs {
+  max-height: 500px; /* Adjust to fit your layout */
+  overflow-y: auto;  /* Enables scroll if the content exceeds max height */
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #333;
+}
+
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   body {
