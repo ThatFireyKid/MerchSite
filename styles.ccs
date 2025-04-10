@@ -17,18 +17,11 @@ body {
   text-align: center;
 }
 
-/* Container Styling */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  width: 100%; /* Ensures the container uses the full width */
+/* Header Styling */
+header {
+  margin-bottom: 30px;
 }
 
-/* Header styles */
 h1 {
   font-size: 3em;
   color: #FF6347; /* Firey Red */
@@ -41,25 +34,41 @@ p {
   margin-bottom: 20px;
 }
 
-/* Link button styling */
-.main-btn {
-  background-color: #FF6347;
-  color: white;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 10px;
-  transition: background-color 0.3s;
+/* Product List Styling */
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.main-btn:hover {
-  background-color: #FF4500; /* Darker red on hover */
+.product-item {
+  text-decoration: none;
+  color: #00FF00;
+  text-align: center;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.product-item img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  font-size: 1.2em;
 }
 
 /* Footer Styling */
 footer {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 0.9em;
   color: #aaa;
 }
